@@ -1,0 +1,98 @@
+$main-red-color: #cc0033;
+
+.pokemon-details {
+  font-family: Tahoma;
+  width: 40%;
+  margin: 10px auto;
+  background: #f9f9f9;
+  border-radius: 5px;
+  border: 1px solid $main-red-color;
+
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    li {
+      padding: 4px;
+      border-top: 1px solid $main-red-color;
+
+      &.name {
+        background: $main-red-color;
+        color: white;
+      }
+    }
+
+    li.evolution-title {
+      color: white;
+      background: $main-red-color;
+    }
+  }
+
+
+
+}
+
+
+
+
+
+
+.tableDiv {
+    display: table;
+    margin: 0 auto;
+
+
+}
+
+.trDiv {
+    display: table-row;
+
+}
+.tdDiv {
+  padding: 10px;
+  vertical-align: middle;
+  text-align: center;
+  display: table-cell;
+
+}
+
+
+
+
+li.evolution-forms {
+  text-align: center;
+  ul {
+    display: inline-block;
+    li {
+      cursor: pointer;
+      display: block;
+      border-top: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+  }
+
+}
+
+
+.not-found {
+  text-align: center;
+}
+
+
+.button-box {
+  text-align: center;
+  button {
+    cursor: pointer;
+    width: 40%;
+    padding: 3px;
+    background: $main-red-color;
+    color: white;
+    border: none;
+  }
+}

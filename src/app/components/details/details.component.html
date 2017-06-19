@@ -1,0 +1,47 @@
+
+<div class="pokemon-details" *ngIf="getPokemon()">
+  <ul>
+    <li class="name">{{getPokemon().name}}</li>
+    <li class="image"><img src={{getPokemon().image}}></li>
+
+    <li class="ability">
+      <div class="tableDiv">
+        <div class="trDiv">
+          <div class="tdDiv">HP</div>
+          <div class="tdDiv">{{getPokemon().hp}}</div>
+        </div>
+        <div class="trDiv">
+          <div class="tdDiv">Speed</div>
+          <div class="tdDiv">{{getPokemon().speed}}</div>
+        </div>
+        <div class="trDiv">
+          <div class="tdDiv">Attack</div>
+          <div class="tdDiv">{{getPokemon().attack}}</div>
+        </div>
+        <div class="trDiv">
+          <div class="tdDiv">Defense</div>
+          <div class="tdDiv">{{getPokemon().defense}}</div>
+        </div>
+      </div>
+    </li>
+    <li *ngIf="getEvolutionForms()" class="evolution-title">Evolution chain</li>
+    <li *ngIf="getEvolutionForms()" class="evolution-forms">
+      <ul>
+        <li class="trDiv" *ngFor="let form of getEvolutionForms()" (click)="goToDetailsById(form.id)">
+          {{form.name}}
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+</div>
+
+<div class="pokemon-details not-found" *ngIf="getPokemon() == null">
+  <p>The Pokemon has not been found</p>
+
+</div>
+
+<div class="button-box">
+  <button (click)="goBack()">Back</button>
+
+</div>

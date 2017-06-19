@@ -1,0 +1,90 @@
+
+
+h1 {
+  font-size: 25px;
+  font-family: Tahoma;
+  text-align: center;
+}
+
+
+ul.pages {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  li {
+    cursor: pointer;
+
+    display: inline-block;
+    padding: 5px;
+
+    min-width: 30px;
+    height: 20px;
+    text-align: center;
+
+    &:hover {
+      border-top: 2px solid #cc0033;
+      background: #cc0033;
+    }
+
+
+  }
+  li.currentPage {
+    border-top: 2px solid #cc0033;
+
+  }
+
+
+}
+
+
+
+
+
+
+.pokemon-table {
+  font-family: Tahoma;
+  width: 80%;
+  margin: 10px auto;
+  background: #f9f9f9;
+  border-radius: 5px;
+  border: 1px solid #cc0033;
+}
+
+
+
+.tableDiv {
+    display: table;
+    width: 100%;
+
+
+}
+
+.trDiv {
+    display: table-row;
+
+    &:first-child, &:first-child:hover .tdDiv {
+      background: #cc0033;
+      cursor: auto;
+      color: white;
+    }
+
+    &:hover .tdDiv {
+      cursor: pointer;
+      background: #f3f3f3;
+    }
+
+}
+.tdDiv {
+  padding: 5px;
+  vertical-align: middle;
+  text-align: center;
+  display: table-cell;
+
+  a {
+    text-decoration: none;
+    color: black;
+
+  }
+
+}

@@ -1,0 +1,36 @@
+<h1>Dashboard</h1>
+
+<div class="pokemon-table">
+  <ul class="pages">
+
+    <li *ngIf="pokemonService.getCurrentPageNumber() > 1" (click)="prevPage()">
+      prev
+    </li><li *ngFor="let pageNumber of createArrayOfPageNmbers()" [class.currentPage]="pokemonService.getCurrentPageNumber() == pageNumber" (click)="changePage(pageNumber)">
+        {{pageNumber}}
+    </li><li *ngIf="pokemonService.getCurrentPageNumber() < pokemonService.getTotalPageNumber() " (click)="nextPage()">
+      next
+    </li>
+  </ul>
+
+
+
+  <div class="tableDiv">
+    <div class="trDiv">
+      <div class="tdDiv">Name</div>
+      <div class="tdDiv">HP</div>
+      <div class="tdDiv">Image</div>
+    </div>
+
+
+    <div class="trDiv" *ngFor="let pokemon of getPokemons()" (click)="goToDetails(pokemon.id)">
+      <div class="tdDiv">
+        <a [routerLink]="['/pokemon', pokemon.id]">{{pokemon.name}}</a>
+        </div>
+      <div class="tdDiv">{{pokemon.hp}}</div>
+      <div class="tdDiv"><img src={{pokemon.image}}></div>
+    </div>
+
+  </div>
+
+
+</div>
